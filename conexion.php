@@ -2,12 +2,10 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "contactos";
+$database = "agenda";
 
-// Crear la conexión
-$mysqli = new mysqli("localhost", "usuario", "contraseña", "agenda_contactos");
+$conn = new mysqli($servername, $username, $password, $database);
 
-// Verificar la conexión
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
